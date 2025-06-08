@@ -1,0 +1,22 @@
+
+cart_data = [
+    {
+        "name": "BBQ Chicken",
+        "price": 850.00,
+        "image": "./Resources/Menu/BBQ1.jpg",
+        "quantity": 2
+    },
+    {
+        "name": "Cheese Burger",
+        "price": 500.00,
+        "image": "./Resources/Menu/Burger1.jpg",
+        "quantity": 1
+    }
+]
+
+# Save the JSON to a file
+file_path = "/mnt/data/CartDetails.json"
+with open(file_path, "w") as f:
+    json.dump(cart_data, f, indent=4)
+
+file_path

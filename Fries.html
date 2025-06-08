@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Homepage</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+
+</head>
+
+<body class="bg-red-700 font-sans m-0 p-0">
+
+    <!-- Navigation Bar -->
+<!-- Navigation Bar -->
+<nav id="navbar" class="bg-black sticky top-0 w-full shadow-lg py-3 transition-transform duration-300 z-50">
+    <div class="max-w-6xl mx-auto px-5">
+      <div class="flex justify-between items-center">
+        <!-- Logo -->
+        <div class="flex items-center space-x-3">
+          <img src="./Resources/Homepage/logo.png" alt="Brand Logo" class="w-12 h-auto rounded-xl shadow-md">
+          <h1 class="text-red-500 text-lg font-bold underline">Brand Name</h1>
+        </div>
+  
+        <!-- Hamburger Button (Mobile) -->
+        <button id="nav-toggle" class="lg:hidden text-red-500 text-2xl focus:outline-none">
+          <i class="fas fa-bars"></i>
+        </button>
+  
+        <!-- Navigation Links (Desktop) -->
+        <div id="nav-menu" class="hidden lg:flex flex-col lg:flex-row lg:items-center lg:space-x-4 text-center">
+         
+            <a href="homepage.html" class="bg-red-500 text-black font-bold px-4 py-2 rounded-md border-2 border-red-500 hover:bg-black hover:text-red-500 transition">Home</a>
+
+            <a href="about.html" class="bg-red-500 text-black font-bold px-4 py-2 rounded-md border-2 border-red-500 hover:bg-black hover:text-red-500 transition">About Us</a>
+         
+            <a href="homepage.html#specials" class="bg-red-500 text-black font-bold px-4 py-2 rounded-md border-2 border-red-500 hover:bg-black hover:text-red-500 transition">Today's Special</a>
+          
+          
+            <a href="homepage.html#menu" class="bg-red-500 text-black font-bold px-4 py-2 rounded-md border-2 border-red-500 hover:bg-black hover:text-red-500 transition">Menu</a>
+          <a href="homepage.html#contact" class="bg-red-500 text-black font-bold px-4 py-2 rounded-md border-2 border-red-500 hover:bg-black hover:text-red-500 transition">Contact</a>
+          <a href="login.html" class="bg-red-500 text-black font-bold px-4 py-2 rounded-md border-2 border-red-500 hover:bg-black hover:text-red-500 transition flex items-center justify-center space-x-2">
+            <i class="fas fa-user"></i><span>Login/Register</span>
+          </a>
+          <a href="Cart.html" class="bg-red-500 text-black font-bold px-4 py-2 rounded-md border-2 border-red-500 hover:bg-black hover:text-red-500 transition flex items-center justify-center space-x-2">
+            <i class="fas fa-shopping-cart"></i><span>Cart</span>
+          </a>
+        </div>
+      </div>
+  
+      <!-- Navigation Links (Mobile Dropdown) -->
+      <div id="nav-menu-mobile" class="lg:hidden hidden flex-col items-center mt-4 space-y-3 text-center">
+        <a href="homepage.html" class="bg-red-500 text-black font-bold px-4 py-2 w-full rounded-md border-2 border-red-500 hover:bg-black hover:text-red-500 transition">Home</a>
+        <a href="about.html" class="bg-red-500 text-black font-bold px-4 py-2 w-full rounded-md border-2 border-red-500 hover:bg-black hover:text-red-500 transition">About Us</a>
+        <a href="homepage.html#specials" class="bg-red-500 text-black font-bold px-4 py-2 w-full rounded-md border-2 border-red-500 hover:bg-black hover:text-red-500 transition">Today's Special</a>
+        <a href="homepage.html#menu" class="bg-red-500 text-black font-bold px-4 py-2 w-full rounded-md border-2 border-red-500 hover:bg-black hover:text-red-500 transition">Menu</a>
+        <a href="homepage.html#contact" class="bg-red-500 text-black font-bold px-4 py-2 w-full rounded-md border-2 border-red-500 hover:bg-black hover:text-red-500 transition">Contact</a>
+        <a href="login.html" class="bg-red-500 text-black font-bold px-4 py-2 w-full rounded-md border-2 border-red-500 hover:bg-black hover:text-red-500 transition flex items-center justify-center space-x-2">
+          <i class="fas fa-user"></i><span>Login/Register</span>
+        </a>
+        <a href="Cart.html" class="bg-red-500 text-black font-bold px-4 py-2 w-full rounded-md border-2 border-red-500 hover:bg-black hover:text-red-500 transition flex items-center justify-center space-x-2">
+          <i class="fas fa-shopping-cart"></i><span>Cart</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+    <!-- JS -->
+    <script>
+        const toggle = document.getElementById('nav-toggle');
+        const mobileMenu = document.getElementById('nav-menu-mobile');
+      
+        toggle.addEventListener('click', () => {
+          mobileMenu.classList.toggle('hidden');
+        });
+      </script>
+
+    <!-- Page Heading -->
+    <header class="bg-black text-red-500 text-center p-8 mt-16 rounded-xl text-2xl font-bold">
+        <h1>Our Fries Selection</h1>
+        <p class="text-lg mt-2">Crispy, golden, and perfectly seasoned – our fries are the perfect side to complement any meal.</p>
+    </header>
+
+    <!-- Regular Fries Section -->
+<section class="max-w-4xl mx-auto mt-12 p-8 rounded-xl text-center">
+    <h2 class="bg-black text-red-500 text-4xl font-bold underline rounded-xl p-4">Regular Fries</h2>
+
+    <div class="flex flex-wrap gap-6 justify-center mt-6">
+        <!-- Small Fries -->
+        <div class="bg-black p-4 shadow-md flex flex-col items-center w-[220px] rounded-lg transition-transform duration-300 hover:scale-105">
+            <img class="w-full h-[150px] object-cover rounded-lg" src="./Resources/Fries Pics/Small.png" alt="Small Fries">
+            <h3 class="text-red-500 text-lg font-bold mt-2">Small Fries</h3>
+            <p class="text-red-500 text-sm mt-1">Crispy golden fries, perfect for a light snack.</p>
+            <span class="text-red-500 text-base font-bold mt-1">149 RS</span>
+            <div class="mt-auto w-full">
+                <button class="bg-red-500 text-black font-bold px-4 py-2 border-2 border-red-500 rounded w-full transition-all duration-300 hover:bg-black hover:text-red-500" 
+                    data-name="Small Fries" data-price="149" data-image="./Resources/Fries Pics/Small.png">Add to Cart
+                </button>
+            </div>
+        </div>
+
+        <!-- Medium Fries -->
+        <div class="bg-black p-4 shadow-md flex flex-col items-center w-[220px] rounded-lg transition-transform duration-300 hover:scale-105">
+            <img class="w-full h-[150px] object-cover rounded-lg" src="./Resources/Fries Pics/Medium.jpg" alt="Medium Fries">
+            <h3 class="text-red-500 text-lg font-bold mt-2">Medium Fries</h3>
+            <p class="text-red-500 text-sm mt-1">A satisfying portion of crispy fries.</p>
+            <span class="text-red-500 text-base font-bold mt-1">199 RS</span>
+            <div class="mt-auto w-full">
+                <button class="bg-red-500 text-black font-bold px-4 py-2 border-2 border-red-500 rounded w-full transition-all duration-300 hover:bg-black hover:text-red-500" 
+                    data-name="Medium Fries" data-price="199" data-image="./Resources/Fries Pics/Medium.jpg">Add to Cart
+                </button>
+            </div>
+        </div>
+
+        <!-- Large Fries -->
+        <div class="bg-black p-4 shadow-md flex flex-col items-center w-[220px] rounded-lg transition-transform duration-300 hover:scale-105">
+            <img class="w-full h-[150px] object-cover rounded-lg" src="./Resources/Fries Pics/Large.png" alt="Large Fries">
+            <h3 class="text-red-500 text-lg font-bold mt-2">Large Fries</h3>
+            <p class="text-red-500 text-sm mt-1">Large serving of crispy, seasoned fries.</p>
+            <span class="text-red-500 text-base font-bold mt-1">249 RS</span>
+            <div class="mt-auto w-full">
+                <button class="bg-red-500 text-black font-bold px-4 py-2 border-2 border-red-500 rounded w-full transition-all duration-300 hover:bg-black hover:text-red-500" 
+                    data-name="Large Fries" data-price="249" data-image="./Resources/Fries Pics/Large.png">Add to Cart
+                </button>
+            </div>
+        </div>
+
+        <!-- Family Fries -->
+        <div class="bg-black p-4 shadow-md flex flex-col items-center w-[220px] rounded-lg transition-transform duration-300 hover:scale-105">
+            <img class="w-full h-[150px] object-cover rounded-lg" src="./Resources/Fries Pics/Family.png" alt="Family Fries">
+            <h3 class="text-red-500 text-lg font-bold mt-2">Family Fries</h3>
+            <p class="text-red-500 text-sm mt-1">A giant portion of fries, great for sharing.</p>
+            <span class="text-red-500 text-base font-bold mt-1">399 RS</span>
+            <div class="mt-auto w-full">
+                <button class="bg-red-500 text-black font-bold px-4 py-2 border-2 border-red-500 rounded w-full transition-all duration-300 hover:bg-black hover:text-red-500" 
+                    data-name="Family Fries" data-price="399" data-image="./Resources/Fries Pics/Family.png">Add to Cart
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Loaded Fries Section -->
+<section class="max-w-4xl mx-auto mt-12 p-8 rounded-xl text-center">
+    <h2 class="bg-black text-red-500 text-4xl font-bold underline rounded-xl p-4">Loaded Fries</h2>
+
+    <div class="flex flex-wrap gap-6 justify-center mt-6">
+        <!-- Loaded Cheese Fries -->
+        <div class="bg-black p-4 shadow-md flex flex-col items-center w-[220px] rounded-lg transition-transform duration-300 hover:scale-105">
+            <img class="w-full h-[150px] object-cover rounded-lg" src="./Resources/Fries Pics/LoadedChhese.jpg" alt="Loaded Cheese Fries">
+            <h3 class="text-red-500 text-lg font-bold mt-2">Loaded Cheese Fries</h3>
+            <p class="text-red-500 text-sm mt-1">Golden fries topped with melted cheese.</p>
+            <span class="text-red-500 text-base font-bold mt-1">349 RS</span>
+            <div class="mt-auto w-full">
+                <button class="bg-red-500 text-black font-bold px-4 py-2 border-2 border-red-500 rounded w-full transition-all duration-300 hover:bg-black hover:text-red-500" 
+                    data-name="Loaded Cheese Fries" data-price="349" data-image="./Resources/Fries Pics/LoadedChhese.jpg">Add to Cart
+                </button>
+            </div>
+        </div>
+
+        <!-- Loaded Tikka Fries -->
+        <div class="bg-black p-4 shadow-md flex flex-col items-center w-[220px] rounded-lg transition-transform duration-300 hover:scale-105">
+            <img class="w-full h-[150px] object-cover rounded-lg" src="./Resources/Fries Pics/Tikka.jpg" alt="Loaded Tikka Fries">
+            <h3 class="text-red-500 text-lg font-bold mt-2">Loaded Tikka Fries</h3>
+            <p class="text-red-500 text-sm mt-1">Spiced tikka chicken on cheesy fries.</p>
+            <span class="text-red-500 text-base font-bold mt-1">399 RS</span>
+            <div class="mt-auto w-full">
+                <button class="bg-red-500 text-black font-bold px-4 py-2 border-2 border-red-500 rounded w-full transition-all duration-300 hover:bg-black hover:text-red-500" 
+                    data-name="Loaded Tikka Fries" data-price="399" data-image="./Resources/Fries Pics/Tikka.jpg">Add to Cart
+                </button>
+            </div>
+        </div>
+
+        <!-- Loaded Nashville Hot Fries -->
+        <div class="bg-black p-4 shadow-md flex flex-col items-center w-[220px] rounded-lg transition-transform duration-300 hover:scale-105">
+            <img class="w-full h-[150px] object-cover rounded-lg" src="./Resources/Fries Pics/NHot.png" alt="Loaded Nashville Hot Fries">
+            <h3 class="text-red-500 text-lg font-bold mt-2">Loaded Nashville Hot Fries</h3>
+            <p class="text-red-500 text-sm mt-1">Spicy Nashville hot chicken on loaded fries.</p>
+            <span class="text-red-500 text-base font-bold mt-1">429 RS</span>
+            <div class="mt-auto w-full">
+                <button class="bg-red-500 text-black font-bold px-4 py-2 border-2 border-red-500 rounded w-full transition-all duration-300 hover:bg-black hover:text-red-500" 
+                    data-name="Loaded Nashville Hot Fries" data-price="429" data-image="./Resources/Fries Pics/NHot.png">Add to Cart
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+    <!-- Footer with Social Media -->
+<footer id="contact" class="bg-black text-red-500 text-center py-5 mt-12">
+    <h2 class="text-3xl font-bold">Contact Us</h2>
+    <p class="mt-2">Phone: 123-456-7890 | Email: restaurant@support.com</p>
+
+    <div class="social-media mt-5">
+        <a href="#" class="social-icon inline-flex items-center justify-center w-12 h-12 mx-2 rounded-full bg-red-500 text-black text-xl transition-all duration-300 transform hover:bg-darkred hover:rotate-360">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="#" class="social-icon inline-flex items-center justify-center w-12 h-12 mx-2 rounded-full bg-red-500 text-black text-xl transition-all duration-300 transform hover:bg-darkred hover:rotate-360">
+            <i class="fab fa-twitter"></i>
+        </a>
+        <a href="#" class="social-icon inline-flex items-center justify-center w-12 h-12 mx-2 rounded-full bg-red-500 text-black text-xl transition-all duration-300 transform hover:bg-darkred hover:rotate-360">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="#" class="social-icon inline-flex items-center justify-center w-12 h-12 mx-2 rounded-full bg-red-500 text-black text-xl transition-all duration-300 transform hover:bg-darkred hover:rotate-360">
+            <i class="fab fa-linkedin-in"></i>
+        </a>
+    </div>
+</footer>
+
+
+<style>
+    @keyframes rotate360 {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    .hover\:rotate-360:hover {
+        animation: rotate360 0.5s ease-in-out;
+    }
+
+    .hover\:bg-darkred:hover {
+        background-color: #8B0000; 
+    }
+</style>
+
+<script src="./Javascript/Cart.js"></script>
+<script src="./Javascript/script.js"></script>
+
+
+</body>
+</html>

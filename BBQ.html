@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Homepage</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+
+</head>
+
+<body class="bg-red-700 font-sans m-0 p-0">
+
+<!-- Navigation Bar -->
+<nav id="navbar" class="bg-black sticky top-0 w-full shadow-lg py-3 transition-transform duration-300 z-50">
+    <div class="max-w-6xl mx-auto px-5">
+      <div class="flex justify-between items-center">
+        <!-- Logo -->
+        <div class="flex items-center space-x-3">
+          <img src="./Resources/Homepage/logo.png" alt="Brand Logo" class="w-12 h-auto rounded-xl shadow-md">
+          <h1 class="text-red-500 text-lg font-bold underline">Brand Name</h1>
+        </div>
+  
+        <!-- Hamburger Button (Mobile) -->
+        <button id="nav-toggle" class="lg:hidden text-red-500 text-2xl focus:outline-none">
+          <i class="fas fa-bars"></i>
+        </button>
+  
+        <!-- Navigation Links (Desktop) -->
+        <div id="nav-menu" class="hidden lg:flex flex-col lg:flex-row lg:items-center lg:space-x-4 text-center">
+         
+            <a href="homepage.html" class="bg-red-500 text-black font-bold px-4 py-2 rounded-md border-2 border-red-500 hover:bg-black hover:text-red-500 transition">Home</a>
+
+            <a href="about.html" class="bg-red-500 text-black font-bold px-4 py-2 rounded-md border-2 border-red-500 hover:bg-black hover:text-red-500 transition">About Us</a>
+         
+            <a href="homepage.html#specials" class="bg-red-500 text-black font-bold px-4 py-2 rounded-md border-2 border-red-500 hover:bg-black hover:text-red-500 transition">Today's Special</a>
+          
+          
+            <a href="homepage.html#menu" class="bg-red-500 text-black font-bold px-4 py-2 rounded-md border-2 border-red-500 hover:bg-black hover:text-red-500 transition">Menu</a>
+          <a href="homepage.html#contact" class="bg-red-500 text-black font-bold px-4 py-2 rounded-md border-2 border-red-500 hover:bg-black hover:text-red-500 transition">Contact</a>
+          <a href="login.html" class="bg-red-500 text-black font-bold px-4 py-2 rounded-md border-2 border-red-500 hover:bg-black hover:text-red-500 transition flex items-center justify-center space-x-2">
+            <i class="fas fa-user"></i><span>Login/Register</span>
+          </a>
+          <a href="Cart.html" class="bg-red-500 text-black font-bold px-4 py-2 rounded-md border-2 border-red-500 hover:bg-black hover:text-red-500 transition flex items-center justify-center space-x-2">
+            <i class="fas fa-shopping-cart"></i><span>Cart</span>
+          </a>
+        </div>
+      </div>
+  
+      <!-- Navigation Links (Mobile Dropdown) -->
+      <div id="nav-menu-mobile" class="lg:hidden hidden flex-col items-center mt-4 space-y-3 text-center">
+        <a href="homepage.html" class="bg-red-500 text-black font-bold px-4 py-2 w-full rounded-md border-2 border-red-500 hover:bg-black hover:text-red-500 transition">Home</a>
+        <a href="about.html" class="bg-red-500 text-black font-bold px-4 py-2 w-full rounded-md border-2 border-red-500 hover:bg-black hover:text-red-500 transition">About Us</a>
+        <a href="homepage.html#specials" class="bg-red-500 text-black font-bold px-4 py-2 w-full rounded-md border-2 border-red-500 hover:bg-black hover:text-red-500 transition">Today's Special</a>
+        <a href="homepage.html#menu" class="bg-red-500 text-black font-bold px-4 py-2 w-full rounded-md border-2 border-red-500 hover:bg-black hover:text-red-500 transition">Menu</a>
+        <a href="homepage.html#contact" class="bg-red-500 text-black font-bold px-4 py-2 w-full rounded-md border-2 border-red-500 hover:bg-black hover:text-red-500 transition">Contact</a>
+        <a href="login.html" class="bg-red-500 text-black font-bold px-4 py-2 w-full rounded-md border-2 border-red-500 hover:bg-black hover:text-red-500 transition flex items-center justify-center space-x-2">
+          <i class="fas fa-user"></i><span>Login/Register</span>
+        </a>
+        <a href="Cart.html" class="bg-red-500 text-black font-bold px-4 py-2 w-full rounded-md border-2 border-red-500 hover:bg-black hover:text-red-500 transition flex items-center justify-center space-x-2">
+          <i class="fas fa-shopping-cart"></i><span>Cart</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+    <!-- JS -->
+    <script>
+        const toggle = document.getElementById('nav-toggle');
+        const mobileMenu = document.getElementById('nav-menu-mobile');
+      
+        toggle.addEventListener('click', () => {
+          mobileMenu.classList.toggle('hidden');
+        });
+      </script>
+
+    <!-- Page Heading -->
+    <header class="bg-black text-red-500 text-center p-8 mt-16 rounded-xl text-2xl font-bold">
+    <h1>Our BBQ Selection</h1>
+    <p class="text-lg mt-2">Enjoy our mouthwatering BBQ selection, grilled to perfection with smoky flavors and delicious marinades.</p>
+</header>
+
+    <!-- Beef BBQ Section -->
+<section class="max-w-4xl mx-auto mt-12 p-8 rounded-xl text-center">
+    <h2 class="bg-black text-red-500 text-4xl font-bold underline rounded-xl p-4">Beef BBQ</h2>
+
+    <div class="flex flex-wrap gap-6 justify-center mt-6">
+        <!-- Beef Kebab -->
+        <div class="bg-black p-4 shadow-md flex flex-col items-center w-[220px] rounded-lg transition-transform duration-300 hover:scale-105">
+            <img class="w-full h-[150px] object-cover rounded-lg" src="./Resources/BBQ Pics/Beef Kebab.png" alt="Beef Kebab">
+            <h3 class="text-red-500 text-lg font-bold mt-2">Beef Kebab</h3>
+            <p class="text-red-500 text-sm mt-1">Juicy and flavorful minced beef kebabs grilled to perfection.</p>
+            <span class="text-red-500 text-base font-bold mt-1">599 RS</span>
+            <div class="mt-auto w-full">
+                <button class="bg-red-500 text-black font-bold px-4 py-2 border-2 border-red-500 rounded w-full transition-all duration-300 hover:bg-black hover:text-red-500" 
+                    data-name="Beef Kebab" data-price="599" data-image="./Resources/BBQ Pics/Beef Kebab.png">Add to Cart
+                </button>
+            </div>
+        </div>
+
+        <!-- Beef Tikka -->
+        <div class="bg-black p-4 shadow-md flex flex-col items-center w-[220px] rounded-lg transition-transform duration-300 hover:scale-105">
+            <img class="w-full h-[150px] object-cover rounded-lg" src="./Resources/BBQ Pics/Beef Tikka.png" alt="Beef Tikka">
+            <h3 class="text-red-500 text-lg font-bold mt-2">Beef Tikka</h3>
+            <p class="text-red-500 text-sm mt-1">Tender beef pieces marinated with aromatic spices and char-grilled.</p>
+            <span class="text-red-500 text-base font-bold mt-1">749 RS</span>
+            <div class="mt-auto w-full">
+                <button class="bg-red-500 text-black font-bold px-4 py-2 border-2 border-red-500 rounded w-full transition-all duration-300 hover:bg-black hover:text-red-500" 
+                    data-name="Beef Tikka" data-price="749" data-image="./Resources/BBQ Pics/Beef Tikka.png">Add to Cart
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Mutton BBQ Section -->
+<section class="max-w-4xl mx-auto mt-12 p-8 rounded-xl text-center">
+    <h2 class="bg-black text-red-500 text-4xl font-bold underline rounded-xl p-4">Mutton BBQ</h2>
+
+    <div class="flex flex-wrap gap-6 justify-center mt-6">
+        <!-- Mutton Kebab -->
+        <div class="bg-black p-4 shadow-md flex flex-col items-center w-[220px] rounded-lg transition-transform duration-300 hover:scale-105">
+            <img class="w-full h-[150px] object-cover rounded-lg" src="./Resources/BBQ Pics/Mutton Kebab.png" alt="Mutton Kebab">
+            <h3 class="text-red-500 text-lg font-bold mt-2">Mutton Kebab</h3>
+            <p class="text-red-500 text-sm mt-1">Spiced mutton kebabs grilled over charcoal for a smoky taste.</p>
+            <span class="text-red-500 text-base font-bold mt-1">699 RS</span>
+            <div class="mt-auto w-full">
+                <button class="bg-red-500 text-black font-bold px-4 py-2 border-2 border-red-500 rounded w-full transition-all duration-300 hover:bg-black hover:text-red-500" 
+                    data-name="Mutton Kebab" data-price="699" data-image="./Resources/BBQ Pics/Mutton Kebab.png">Add to Cart
+                </button>
+            </div>
+        </div>
+
+        <!-- Mutton Tikka -->
+        <div class="bg-black p-4 shadow-md flex flex-col items-center w-[220px] rounded-lg transition-transform duration-300 hover:scale-105">
+            <img class="w-full h-[150px] object-cover rounded-lg" src="./Resources/BBQ Pics/Mutton Tikka.png" alt="Mutton Tikka">
+            <h3 class="text-red-500 text-lg font-bold mt-2">Mutton Tikka</h3>
+            <p class="text-red-500 text-sm mt-1">Succulent mutton cubes marinated with traditional spices.</p>
+            <span class="text-red-500 text-base font-bold mt-1">799 RS</span>
+            <div class="mt-auto w-full">
+                <button class="bg-red-500 text-black font-bold px-4 py-2 border-2 border-red-500 rounded w-full transition-all duration-300 hover:bg-black hover:text-red-500" 
+                    data-name="Mutton Tikka" data-price="799" data-image="./Resources/BBQ Pics/Mutton Tikka.png">Add to Cart
+                </button>
+            </div>
+        </div>
+
+        <!-- Mutton Chops -->
+        <div class="bg-black p-4 shadow-md flex flex-col items-center w-[220px] rounded-lg transition-transform duration-300 hover:scale-105">
+            <img class="w-full h-[150px] object-cover rounded-lg" src="./Resources/BBQ Pics/Chops.png" alt="Mutton Chops">
+            <h3 class="text-red-500 text-lg font-bold mt-2">Mutton Chops</h3>
+            <p class="text-red-500 text-sm mt-1">Juicy mutton chops infused with rich spices and grilled.</p>
+            <span class="text-red-500 text-base font-bold mt-1">849 RS</span>
+            <div class="mt-auto w-full">
+                <button class="bg-red-500 text-black font-bold px-4 py-2 border-2 border-red-500 rounded w-full transition-all duration-300 hover:bg-black hover:text-red-500" 
+                    data-name="Mutton Chops" data-price="849" data-image="./Resources/BBQ Pics/Chops.png">Add to Cart
+                </button>
+            </div>
+        </div>
+
+        <!-- Charsi Tikka -->
+        <div class="bg-black p-4 shadow-md flex flex-col items-center w-[220px] rounded-lg transition-transform duration-300 hover:scale-105">
+            <img class="w-full h-[150px] object-cover rounded-lg" src="./Resources/BBQ Pics/Charsi Tikka.png" alt="Charsi Tikka">
+            <h3 class="text-red-500 text-lg font-bold mt-2">Charsi Tikka</h3>
+            <p class="text-red-500 text-sm mt-1">Traditional Pashtun-style mutton tikka with minimal yet bold spices.</p>
+            <span class="text-red-500 text-base font-bold mt-1">899 RS</span>
+            <div class="mt-auto w-full">
+                <button class="bg-red-500 text-black font-bold px-4 py-2 border-2 border-red-500 rounded w-full transition-all duration-300 hover:bg-black hover:text-red-500" 
+                    data-name="Charsi Tikka" data-price="899" data-image="./Resources/BBQ Pics/Charsi Tikka.png">Add to Cart
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Chicken BBQ Section -->
+<section class="max-w-4xl mx-auto mt-12 p-8 rounded-xl text-center">
+    <h2 class="bg-black text-red-500 text-4xl font-bold underline rounded-xl p-4">Chicken BBQ</h2>
+
+    <div class="flex flex-wrap gap-6 justify-center mt-6">
+        <!-- Chicken Kebab -->
+        <div class="bg-black p-4 shadow-md flex flex-col items-center w-[220px] rounded-lg transition-transform duration-300 hover:scale-105">
+            <img class="w-full h-[150px] object-cover rounded-lg" src="./Resources/BBQ Pics/Chicken Kebab.png" alt="Chicken Kebab">
+            <h3 class="text-red-500 text-lg font-bold mt-2">Chicken Kebab</h3>
+            <p class="text-red-500 text-sm mt-1">Grilled minced chicken kebabs with aromatic spices.</p>
+            <span class="text-red-500 text-base font-bold mt-1">549 RS</span>
+            <div class="mt-auto w-full">
+                <button class="bg-red-500 text-black font-bold px-4 py-2 border-2 border-red-500 rounded w-full transition-all duration-300 hover:bg-black hover:text-red-500" 
+                    data-name="Chicken Kebab" data-price="549" data-image="./Resources/BBQ Pics/Chicken Kebab.png">Add to Cart
+                </button>
+            </div>
+        </div>
+
+        <!-- Reshmi Kebab -->
+        <div class="bg-black p-4 shadow-md flex flex-col items-center w-[220px] rounded-lg transition-transform duration-300 hover:scale-105">
+            <img class="w-full h-[150px] object-cover rounded-lg" src="./Resources/BBQ Pics/Reshmi Kebab.jpg" alt="Reshmi Kebab">
+            <h3 class="text-red-500 text-lg font-bold mt-2">Reshmi Kebab</h3>
+            <p class="text-red-500 text-sm mt-1">Silky smooth, mildly spiced chicken kebabs cooked to perfection.</p>
+            <span class="text-red-500 text-base font-bold mt-1">599 RS</span>
+            <div class="mt-auto w-full">
+                <button class="bg-red-500 text-black font-bold px-4 py-2 border-2 border-red-500 rounded w-full transition-all duration-300 hover:bg-black hover:text-red-500" 
+                    data-name="Reshmi Kebab" data-price="599" data-image="./Resources/BBQ Pics/Reshmi Kebab.jpg">Add to Cart
+                </button>
+            </div>
+        </div>
+
+        <!-- Chicken Tikka -->
+        <div class="bg-black p-4 shadow-md flex flex-col items-center w-[220px] rounded-lg transition-transform duration-300 hover:scale-105">
+            <img class="w-full h-[150px] object-cover rounded-lg" src="./Resources/BBQ Pics/Chik-Tikka.png" alt="Chicken Tikka">
+            <h3 class="text-red-500 text-lg font-bold mt-2">Chicken Tikka</h3>
+            <p class="text-red-500 text-sm mt-1">Char-grilled chicken pieces marinated in a spicy yogurt blend.</p>
+            <span class="text-red-500 text-base font-bold mt-1">649 RS</span>
+            <div class="mt-auto w-full">
+                <button class="bg-red-500 text-black font-bold px-4 py-2 border-2 border-red-500 rounded w-full transition-all duration-300 hover:bg-black hover:text-red-500" 
+                    data-name="Chicken Tikka" data-price="649" data-image="./Resources/BBQ Pics/Chik-Tikka.png">Add to Cart
+                </button>
+            </div>
+        </div>
+
+        <!-- Chicken Leg Piece -->
+        <div class="bg-black p-4 shadow-md flex flex-col items-center w-[220px] rounded-lg transition-transform duration-300 hover:scale-105">
+            <img class="w-full h-[150px] object-cover rounded-lg" src="./Resources/BBQ Pics/Leg.png" alt="Chicken Leg Piece">
+            <h3 class="text-red-500 text-lg font-bold mt-2">Chicken Leg Piece</h3>
+            <p class="text-red-500 text-sm mt-1">Smoky and juicy leg piece marinated in rich BBQ spices.</p>
+            <span class="text-red-500 text-base font-bold mt-1">499 RS</span>
+            <div class="mt-auto w-full">
+                <button class="bg-red-500 text-black font-bold px-4 py-2 border-2 border-red-500 rounded w-full transition-all duration-300 hover:bg-black hover:text-red-500" 
+                    data-name="Chicken Leg Piece" data-price="499" data-image="./Resources/BBQ Pics/Leg.png">Add to Cart
+                </button>
+            </div>
+        </div>
+
+        <!-- Chicken Breast Piece -->
+        <div class="bg-black p-4 shadow-md flex flex-col items-center w-[220px] rounded-lg transition-transform duration-300 hover:scale-105">
+            <img class="w-full h-[150px] object-cover rounded-lg" src="./Resources/BBQ Pics/Breast.png" alt="Chicken Breast Piece">
+            <h3 class="text-red-500 text-lg font-bold mt-2">Chicken Breast Piece</h3>
+            <p class="text-red-500 text-sm mt-1">Grilled chicken thigh infused with smoky BBQ flavors.</p>
+            <span class="text-red-500 text-base font-bold mt-1">529 RS</span>
+            <div class="mt-auto w-full">
+                <button class="bg-red-500 text-black font-bold px-4 py-2 border-2 border-red-500 rounded w-full transition-all duration-300 hover:bg-black hover:text-red-500" 
+                    data-name="Chicken Breast Piece" data-price="529" data-image="./Resources/BBQ Pics/Breast.png">Add to Cart
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Footer with Social Media -->
+<footer id="contact" class="bg-black text-red-500 text-center py-5 mt-12">
+    <h2 class="text-3xl font-bold">Contact Us</h2>
+    <p class="mt-2">Phone: 123-456-7890 | Email: restaurant@support.com</p>
+
+    <div class="social-media mt-5">
+        <a href="#" class="social-icon inline-flex items-center justify-center w-12 h-12 mx-2 rounded-full bg-red-500 text-black text-xl transition-all duration-300 transform hover:bg-darkred hover:rotate-360">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="#" class="social-icon inline-flex items-center justify-center w-12 h-12 mx-2 rounded-full bg-red-500 text-black text-xl transition-all duration-300 transform hover:bg-darkred hover:rotate-360">
+            <i class="fab fa-twitter"></i>
+        </a>
+        <a href="#" class="social-icon inline-flex items-center justify-center w-12 h-12 mx-2 rounded-full bg-red-500 text-black text-xl transition-all duration-300 transform hover:bg-darkred hover:rotate-360">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="#" class="social-icon inline-flex items-center justify-center w-12 h-12 mx-2 rounded-full bg-red-500 text-black text-xl transition-all duration-300 transform hover:bg-darkred hover:rotate-360">
+            <i class="fab fa-linkedin-in"></i>
+        </a>
+    </div>
+</footer>
+
+
+<style>
+    @keyframes rotate360 {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    .hover\:rotate-360:hover {
+        animation: rotate360 0.5s ease-in-out;
+    }
+
+    .hover\:bg-darkred:hover {
+        background-color: #8B0000; 
+    }
+</style>
+
+<script src="./Javascript/Cart.js"></script>
+<script src="./Javascript/script.js"></script>
+
+</body>
+</html>

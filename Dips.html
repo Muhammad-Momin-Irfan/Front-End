@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Homepage</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+
+</head>
+
+<body class="bg-red-700 font-sans m-0 p-0">
+
+<!-- Navigation Bar -->
+<nav id="navbar" class="bg-black sticky top-0 w-full shadow-lg py-3 transition-transform duration-300 z-50">
+    <div class="max-w-6xl mx-auto px-5">
+      <div class="flex justify-between items-center">
+        <!-- Logo -->
+        <div class="flex items-center space-x-3">
+          <img src="./Resources/Homepage/logo.png" alt="Brand Logo" class="w-12 h-auto rounded-xl shadow-md">
+          <h1 class="text-red-500 text-lg font-bold underline">Brand Name</h1>
+        </div>
+  
+        <!-- Hamburger Button (Mobile) -->
+        <button id="nav-toggle" class="lg:hidden text-red-500 text-2xl focus:outline-none">
+          <i class="fas fa-bars"></i>
+        </button>
+  
+        <!-- Navigation Links (Desktop) -->
+        <div id="nav-menu" class="hidden lg:flex flex-col lg:flex-row lg:items-center lg:space-x-4 text-center">
+         
+            <a href="homepage.html" class="bg-red-500 text-black font-bold px-4 py-2 rounded-md border-2 border-red-500 hover:bg-black hover:text-red-500 transition">Home</a>
+
+            <a href="about.html" class="bg-red-500 text-black font-bold px-4 py-2 rounded-md border-2 border-red-500 hover:bg-black hover:text-red-500 transition">About Us</a>
+         
+            <a href="homepage.html#specials" class="bg-red-500 text-black font-bold px-4 py-2 rounded-md border-2 border-red-500 hover:bg-black hover:text-red-500 transition">Today's Special</a>
+          
+          
+            <a href="homepage.html#menu" class="bg-red-500 text-black font-bold px-4 py-2 rounded-md border-2 border-red-500 hover:bg-black hover:text-red-500 transition">Menu</a>
+          <a href="homepage.html#contact" class="bg-red-500 text-black font-bold px-4 py-2 rounded-md border-2 border-red-500 hover:bg-black hover:text-red-500 transition">Contact</a>
+          <a href="login.html" class="bg-red-500 text-black font-bold px-4 py-2 rounded-md border-2 border-red-500 hover:bg-black hover:text-red-500 transition flex items-center justify-center space-x-2">
+            <i class="fas fa-user"></i><span>Login/Register</span>
+          </a>
+          <a href="Cart.html" class="bg-red-500 text-black font-bold px-4 py-2 rounded-md border-2 border-red-500 hover:bg-black hover:text-red-500 transition flex items-center justify-center space-x-2">
+            <i class="fas fa-shopping-cart"></i><span>Cart</span>
+          </a>
+        </div>
+      </div>
+  
+      <!-- Navigation Links (Mobile Dropdown) -->
+      <div id="nav-menu-mobile" class="lg:hidden hidden flex-col items-center mt-4 space-y-3 text-center">
+        <a href="homepage.html" class="bg-red-500 text-black font-bold px-4 py-2 w-full rounded-md border-2 border-red-500 hover:bg-black hover:text-red-500 transition">Home</a>
+        <a href="about.html" class="bg-red-500 text-black font-bold px-4 py-2 w-full rounded-md border-2 border-red-500 hover:bg-black hover:text-red-500 transition">About Us</a>
+        <a href="homepage.html#specials" class="bg-red-500 text-black font-bold px-4 py-2 w-full rounded-md border-2 border-red-500 hover:bg-black hover:text-red-500 transition">Today's Special</a>
+        <a href="homepage.html#menu" class="bg-red-500 text-black font-bold px-4 py-2 w-full rounded-md border-2 border-red-500 hover:bg-black hover:text-red-500 transition">Menu</a>
+        <a href="homepage.html#contact" class="bg-red-500 text-black font-bold px-4 py-2 w-full rounded-md border-2 border-red-500 hover:bg-black hover:text-red-500 transition">Contact</a>
+        <a href="login.html" class="bg-red-500 text-black font-bold px-4 py-2 w-full rounded-md border-2 border-red-500 hover:bg-black hover:text-red-500 transition flex items-center justify-center space-x-2">
+          <i class="fas fa-user"></i><span>Login/Register</span>
+        </a>
+        <a href="Cart.html" class="bg-red-500 text-black font-bold px-4 py-2 w-full rounded-md border-2 border-red-500 hover:bg-black hover:text-red-500 transition flex items-center justify-center space-x-2">
+          <i class="fas fa-shopping-cart"></i><span>Cart</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+    <!-- JS -->
+    <script>
+        const toggle = document.getElementById('nav-toggle');
+        const mobileMenu = document.getElementById('nav-menu-mobile');
+      
+        toggle.addEventListener('click', () => {
+          mobileMenu.classList.toggle('hidden');
+        });
+      </script>
+
+
+    <!-- Page Heading -->
+    <header class="bg-black text-red-500 text-center p-8 mt-16 rounded-xl text-2xl font-bold">
+        <h1>Our Dips Selection</h1>
+        <p class="text-lg mt-2">Add extra flavor to your meal with our selection of rich and creamy dips, perfect for every bite.</p>
+    </header>
+
+    <!-- Dips Section -->
+<section class="max-w-4xl mx-auto mt-12 p-8 rounded-xl text-center">
+    <h2 class="bg-black text-red-500 text-4xl font-bold underline rounded-xl p-4">Dips</h2>
+
+    <div class="flex flex-wrap gap-6 justify-center mt-6">
+        <!-- Mayo -->
+        <div class="bg-black p-4 shadow-md flex flex-col items-center w-[220px] rounded-lg transition-transform duration-300 hover:scale-105">
+            <img class="w-full h-[150px] object-cover rounded-lg" src="./Resources/Dips Pics/Mayo.png" alt="Mayo">
+            <h3 class="text-red-500 text-lg font-bold mt-2">Mayo</h3>
+            <p class="text-red-500 text-sm mt-1">Creamy and smooth classic mayo.</p>
+            <span class="text-red-500 text-base font-bold mt-1">49 RS</span>
+            <div class="mt-auto w-full">
+                <button class="bg-red-500 text-black font-bold px-4 py-2 border-2 border-red-500 rounded w-full transition-all duration-300 hover:bg-black hover:text-red-500" 
+                    data-name="Mayo" data-price="49" data-image="./Resources/Dips Pics/Mayo.png">Add to Cart
+                </button>
+            </div>
+        </div>
+
+        <!-- Garlic Mayo -->
+        <div class="bg-black p-4 shadow-md flex flex-col items-center w-[220px] rounded-lg transition-transform duration-300 hover:scale-105">
+            <img class="w-full h-[150px] object-cover rounded-lg" src="./Resources/Dips Pics/Garlic Mayo.png" alt="Garlic Mayo">
+            <h3 class="text-red-500 text-lg font-bold mt-2">Garlic Mayo</h3>
+            <p class="text-red-500 text-sm mt-1">Rich mayo infused with garlic flavor.</p>
+            <span class="text-red-500 text-base font-bold mt-1">59 RS</span>
+            <div class="mt-auto w-full">
+                <button class="bg-red-500 text-black font-bold px-4 py-2 border-2 border-red-500 rounded w-full transition-all duration-300 hover:bg-black hover:text-red-500" 
+                    data-name="Garlic Mayo" data-price="59" data-image="./Resources/Dips Pics/Garlic Mayo.png">Add to Cart
+                </button>
+            </div>
+        </div>
+
+        <!-- Chili Garlic -->
+        <div class="bg-black p-4 shadow-md flex flex-col items-center w-[220px] rounded-lg transition-transform duration-300 hover:scale-105">
+            <img class="w-full h-[150px] object-cover rounded-lg" src="./Resources/Dips Pics/ChilliG.jpg" alt="Chili Garlic">
+            <h3 class="text-red-500 text-lg font-bold mt-2">Chili Garlic</h3>
+            <p class="text-red-500 text-sm mt-1">Spicy and tangy chili garlic sauce.</p>
+            <span class="text-red-500 text-base font-bold mt-1">59 RS</span>
+            <div class="mt-auto w-full">
+                <button class="bg-red-500 text-black font-bold px-4 py-2 border-2 border-red-500 rounded w-full transition-all duration-300 hover:bg-black hover:text-red-500" 
+                    data-name="Chili Garlic" data-price="59" data-image="./Resources/Dips Pics/ChilliG.jpg">Add to Cart
+                </button>
+            </div>
+        </div>
+
+        <!-- BBQ -->
+        <div class="bg-black p-4 shadow-md flex flex-col items-center w-[220px] rounded-lg transition-transform duration-300 hover:scale-105">
+            <img class="w-full h-[150px] object-cover rounded-lg" src="./Resources/Dips Pics/BBQ.png" alt="BBQ">
+            <h3 class="text-red-500 text-lg font-bold mt-2">BBQ</h3>
+            <p class="text-red-500 text-sm mt-1">Smoky and rich barbecue sauce.</p>
+            <span class="text-red-500 text-base font-bold mt-1">59 RS</span>
+            <div class="mt-auto w-full">
+                <button class="bg-red-500 text-black font-bold px-4 py-2 border-2 border-red-500 rounded w-full transition-all duration-300 hover:bg-black hover:text-red-500" 
+                    data-name="BBQ" data-price="59" data-image="./Resources/Dips Pics/BBQ.png">Add to Cart
+                </button>
+            </div>
+        </div>
+
+        <!-- Ketchup -->
+        <div class="bg-black p-4 shadow-md flex flex-col items-center w-[220px] rounded-lg transition-transform duration-300 hover:scale-105">
+            <img class="w-full h-[150px] object-cover rounded-lg" src="./Resources/Dips Pics/Ketchup.png" alt="Ketchup">
+            <h3 class="text-red-500 text-lg font-bold mt-2">Ketchup</h3>
+            <p class="text-red-500 text-sm mt-1">Classic tomato ketchup with a hint of sweetness.</p>
+            <span class="text-red-500 text-base font-bold mt-1">39 RS</span>
+            <div class="mt-auto w-full">
+                <button class="bg-red-500 text-black font-bold px-4 py-2 border-2 border-red-500 rounded w-full transition-all duration-300 hover:bg-black hover:text-red-500" 
+                    data-name="Ketchup" data-price="39" data-image="./Resources/Dips Pics/Ketchup.png">Add to Cart
+                </button>
+            </div>
+        </div>
+
+        <!-- Ranch -->
+        <div class="bg-black p-4 shadow-md flex flex-col items-center w-[220px] rounded-lg transition-transform duration-300 hover:scale-105">
+            <img class="w-full h-[150px] object-cover rounded-lg" src="./Resources/Dips Pics/Ranch.png" alt="Ranch">
+            <h3 class="text-red-500 text-lg font-bold mt-2">Ranch</h3>
+            <p class="text-red-500 text-sm mt-1">Cool and creamy ranch dressing.</p>
+            <span class="text-red-500 text-base font-bold mt-1">69 RS</span>
+            <div class="mt-auto w-full">
+                <button class="bg-red-500 text-black font-bold px-4 py-2 border-2 border-red-500 rounded w-full transition-all duration-300 hover:bg-black hover:text-red-500" 
+                    data-name="Ranch" data-price="69" data-image="./Resources/Dips Pics/Ranch.png">Add to Cart
+                </button>
+            </div>
+        </div>
+
+        <!-- Tandoori Mayo -->
+        <div class="bg-black p-4 shadow-md flex flex-col items-center w-[220px] rounded-lg transition-transform duration-300 hover:scale-105">
+            <img class="w-full h-[150px] object-cover rounded-lg" src="./Resources/Dips Pics/tandoori.png" alt="Tandoori Mayo">
+            <h3 class="text-red-500 text-lg font-bold mt-2">Tandoori Mayo</h3>
+            <p class="text-red-500 text-sm mt-1">Bold and spiced tandoori-flavored mayo.</p>
+            <span class="text-red-500 text-base font-bold mt-1">69 RS</span>
+            <div class="mt-auto w-full">
+                <button class="bg-red-500 text-black font-bold px-4 py-2 border-2 border-red-500 rounded w-full transition-all duration-300 hover:bg-black hover:text-red-500" 
+                    data-name="Tandoori Mayo" data-price="69" data-image="./Resources/Dips Pics/tandoori.png">Add to Cart
+                </button>
+            </div>
+        </div>
+
+        <!-- Cheese Dip -->
+        <div class="bg-black p-4 shadow-md flex flex-col items-center w-[220px] rounded-lg transition-transform duration-300 hover:scale-105">
+            <img class="w-full h-[150px] object-cover rounded-lg" src="./Resources/Dips Pics/CheeseDip.jpg" alt="Cheese Dip">
+            <h3 class="text-red-500 text-lg font-bold mt-2">Cheese Dip</h3>
+            <p class="text-red-500 text-sm mt-1">Velvety and rich cheese sauce.</p>
+            <span class="text-red-500 text-base font-bold mt-1">79 RS</span>
+            <div class="mt-auto w-full">
+                <button class="bg-red-500 text-black font-bold px-4 py-2 border-2 border-red-500 rounded w-full transition-all duration-300 hover:bg-black hover:text-red-500" 
+                    data-name="Cheese Dip" data-price="79" data-image="./Resources/Dips Pics/CheeseDip.jpg">Add to Cart
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+    
+
+    <!-- Footer with Social Media -->
+<footer id="contact" class="bg-black text-red-500 text-center py-5 mt-12">
+    <h2 class="text-3xl font-bold">Contact Us</h2>
+    <p class="mt-2">Phone: 123-456-7890 | Email: restaurant@support.com</p>
+
+    <div class="social-media mt-5">
+        <a href="#" class="social-icon inline-flex items-center justify-center w-12 h-12 mx-2 rounded-full bg-red-500 text-black text-xl transition-all duration-300 transform hover:bg-darkred hover:rotate-360">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="#" class="social-icon inline-flex items-center justify-center w-12 h-12 mx-2 rounded-full bg-red-500 text-black text-xl transition-all duration-300 transform hover:bg-darkred hover:rotate-360">
+            <i class="fab fa-twitter"></i>
+        </a>
+        <a href="#" class="social-icon inline-flex items-center justify-center w-12 h-12 mx-2 rounded-full bg-red-500 text-black text-xl transition-all duration-300 transform hover:bg-darkred hover:rotate-360">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="#" class="social-icon inline-flex items-center justify-center w-12 h-12 mx-2 rounded-full bg-red-500 text-black text-xl transition-all duration-300 transform hover:bg-darkred hover:rotate-360">
+            <i class="fab fa-linkedin-in"></i>
+        </a>
+    </div>
+</footer>
+
+
+<style>
+    @keyframes rotate360 {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    .hover\:rotate-360:hover {
+        animation: rotate360 0.5s ease-in-out;
+    }
+
+    .hover\:bg-darkred:hover {
+        background-color: #8B0000; 
+    }
+</style>
+
+<script src="./Javascript/Cart.js"></script>
+<script src="./Javascript/script.js"></script>
+
+</body>
+</html>

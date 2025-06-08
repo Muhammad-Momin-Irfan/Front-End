@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Homepage</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+
+</head>
+
+<body class="bg-red-700 font-sans m-0 p-0">
+
+<!-- Navigation Bar -->
+<nav id="navbar" class="bg-black sticky top-0 w-full shadow-lg py-3 transition-transform duration-300 z-50">
+    <div class="max-w-6xl mx-auto px-5">
+      <div class="flex justify-between items-center">
+        <!-- Logo -->
+        <div class="flex items-center space-x-3">
+          <img src="./Resources/Homepage/logo.png" alt="Brand Logo" class="w-12 h-auto rounded-xl shadow-md">
+          <h1 class="text-red-500 text-lg font-bold underline">Brand Name</h1>
+        </div>
+  
+        <!-- Hamburger Button (Mobile) -->
+        <button id="nav-toggle" class="lg:hidden text-red-500 text-2xl focus:outline-none">
+          <i class="fas fa-bars"></i>
+        </button>
+  
+        <!-- Navigation Links (Desktop) -->
+        <div id="nav-menu" class="hidden lg:flex flex-col lg:flex-row lg:items-center lg:space-x-4 text-center">
+         
+            <a href="homepage.html" class="bg-red-500 text-black font-bold px-4 py-2 rounded-md border-2 border-red-500 hover:bg-black hover:text-red-500 transition">Home</a>
+
+            <a href="about.html" class="bg-red-500 text-black font-bold px-4 py-2 rounded-md border-2 border-red-500 hover:bg-black hover:text-red-500 transition">About Us</a>
+         
+            <a href="homepage.html#specials" class="bg-red-500 text-black font-bold px-4 py-2 rounded-md border-2 border-red-500 hover:bg-black hover:text-red-500 transition">Today's Special</a>
+          
+          
+            <a href="homepage.html#menu" class="bg-red-500 text-black font-bold px-4 py-2 rounded-md border-2 border-red-500 hover:bg-black hover:text-red-500 transition">Menu</a>
+          <a href="homepage.html#contact" class="bg-red-500 text-black font-bold px-4 py-2 rounded-md border-2 border-red-500 hover:bg-black hover:text-red-500 transition">Contact</a>
+          <a href="login.html" class="bg-red-500 text-black font-bold px-4 py-2 rounded-md border-2 border-red-500 hover:bg-black hover:text-red-500 transition flex items-center justify-center space-x-2">
+            <i class="fas fa-user"></i><span>Login/Register</span>
+          </a>
+          <a href="Cart.html" class="bg-red-500 text-black font-bold px-4 py-2 rounded-md border-2 border-red-500 hover:bg-black hover:text-red-500 transition flex items-center justify-center space-x-2">
+            <i class="fas fa-shopping-cart"></i><span>Cart</span>
+          </a>
+        </div>
+      </div>
+  
+      <!-- Navigation Links (Mobile Dropdown) -->
+      <div id="nav-menu-mobile" class="lg:hidden hidden flex-col items-center mt-4 space-y-3 text-center">
+        <a href="homepage.html" class="bg-red-500 text-black font-bold px-4 py-2 w-full rounded-md border-2 border-red-500 hover:bg-black hover:text-red-500 transition">Home</a>
+        <a href="about.html" class="bg-red-500 text-black font-bold px-4 py-2 w-full rounded-md border-2 border-red-500 hover:bg-black hover:text-red-500 transition">About Us</a>
+        <a href="homepage.html#specials" class="bg-red-500 text-black font-bold px-4 py-2 w-full rounded-md border-2 border-red-500 hover:bg-black hover:text-red-500 transition">Today's Special</a>
+        <a href="homepage.html#menu" class="bg-red-500 text-black font-bold px-4 py-2 w-full rounded-md border-2 border-red-500 hover:bg-black hover:text-red-500 transition">Menu</a>
+        <a href="homepage.html#contact" class="bg-red-500 text-black font-bold px-4 py-2 w-full rounded-md border-2 border-red-500 hover:bg-black hover:text-red-500 transition">Contact</a>
+        <a href="login.html" class="bg-red-500 text-black font-bold px-4 py-2 w-full rounded-md border-2 border-red-500 hover:bg-black hover:text-red-500 transition flex items-center justify-center space-x-2">
+          <i class="fas fa-user"></i><span>Login/Register</span>
+        </a>
+        <a href="Cart.html" class="bg-red-500 text-black font-bold px-4 py-2 w-full rounded-md border-2 border-red-500 hover:bg-black hover:text-red-500 transition flex items-center justify-center space-x-2">
+          <i class="fas fa-shopping-cart"></i><span>Cart</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+    <!-- JS -->
+    <script>
+        const toggle = document.getElementById('nav-toggle');
+        const mobileMenu = document.getElementById('nav-menu-mobile');
+      
+        toggle.addEventListener('click', () => {
+          mobileMenu.classList.toggle('hidden');
+        });
+      </script>
+
+
+
+    <!-- Page Heading -->
+    <header class="bg-black text-red-500 text-center p-8 mt-16 rounded-xl text-2xl font-bold">
+        <h1>Our Drinks Selection</h1>
+        <p class="text-lg mt-2">Quench your thirst with our refreshing selection of soft drinks, fresh juices, and chilled beverages.</p>
+    </header>
+
+    <!-- Juices and Shakes Section -->
+<section class="max-w-4xl mx-auto mt-12 p-8 rounded-xl text-center">
+    <h2 class="bg-black text-red-500 text-4xl font-bold underline rounded-xl p-4">Juices and Shakes</h2>
+
+    <div class="flex flex-wrap gap-6 justify-center mt-6">
+        <!-- Apple Juice -->
+        <div class="bg-black p-4 shadow-md flex flex-col items-center w-[220px] rounded-lg transition-transform duration-300 hover:scale-105">
+            <img class="w-full h-[150px] object-cover rounded-lg" src="./Resources/Drinks Pics/Apple Juiice.jpg" alt="Apple Juice">
+            <h3 class="text-red-500 text-lg font-bold mt-2">Apple Juice</h3>
+            <p class="text-red-500 text-sm mt-1">Freshly squeezed apple juice, rich in vitamins.</p>
+            <span class="text-red-500 text-base font-bold mt-1">199 RS</span>
+            <div class="mt-auto w-full">
+                <button class="bg-red-500 text-black font-bold px-4 py-2 border-2 border-red-500 rounded w-full transition-all duration-300 hover:bg-black hover:text-red-500" 
+                    data-name="Apple Juice" data-price="199" data-image="./Resources/Drinks Pics/Apple Juiice.jpg">Add to Cart
+                </button>
+            </div>
+        </div>
+
+        <!-- Mango Juice -->
+        <div class="bg-black p-4 shadow-md flex flex-col items-center w-[220px] rounded-lg transition-transform duration-300 hover:scale-105">
+            <img class="w-full h-[150px] object-cover rounded-lg" src="./Resources/Drinks Pics/Mango Juice.jpg" alt="Mango Juice">
+            <h3 class="text-red-500 text-lg font-bold mt-2">Mango Juice</h3>
+            <p class="text-red-500 text-sm mt-1">Sweet and thick mango pulp juice.</p>
+            <span class="text-red-500 text-base font-bold mt-1">249 RS</span>
+            <div class="mt-auto w-full">
+                <button class="bg-red-500 text-black font-bold px-4 py-2 border-2 border-red-500 rounded w-full transition-all duration-300 hover:bg-black hover:text-red-500" 
+                    data-name="Mango Juice" data-price="249" data-image="./Resources/Drinks Pics/Mango Juice.jpg">Add to Cart
+                </button>
+            </div>
+        </div>
+
+        <!-- Pineapple Juice -->
+        <div class="bg-black p-4 shadow-md flex flex-col items-center w-[220px] rounded-lg transition-transform duration-300 hover:scale-105">
+            <img class="w-full h-[150px] object-cover rounded-lg" src="./Resources/Drinks Pics/Pineapple Juice.png" alt="Pineapple Juice">
+            <h3 class="text-red-500 text-lg font-bold mt-2">Pineapple Juice</h3>
+            <p class="text-red-500 text-sm mt-1">Refreshing pineapple juice with a tropical taste.</p>
+            <span class="text-red-500 text-base font-bold mt-1">229 RS</span>
+            <div class="mt-auto w-full">
+                <button class="bg-red-500 text-black font-bold px-4 py-2 border-2 border-red-500 rounded w-full transition-all duration-300 hover:bg-black hover:text-red-500" 
+                    data-name="Pineapple Juice" data-price="229" data-image="./Resources/Drinks Pics/Pineapple Juice.png">Add to Cart
+                </button>
+            </div>
+        </div>
+
+        <!-- Carrot Juice -->
+        <div class="bg-black p-4 shadow-md flex flex-col items-center w-[220px] rounded-lg transition-transform duration-300 hover:scale-105">
+            <img class="w-full h-[150px] object-cover rounded-lg" src="./Resources/Drinks Pics/Carrot Juice.jpg" alt="Carrot Juice">
+            <h3 class="text-red-500 text-lg font-bold mt-2">Carrot Juice</h3>
+            <p class="text-red-500 text-sm mt-1">Nutrient-packed fresh carrot juice.</p>
+            <span class="text-red-500 text-base font-bold mt-1">219 RS</span>
+            <div class="mt-auto w-full">
+                <button class="bg-red-500 text-black font-bold px-4 py-2 border-2 border-red-500 rounded w-full transition-all duration-300 hover:bg-black hover:text-red-500" 
+                    data-name="Carrot Juice" data-price="219" data-image="./Resources/Drinks Pics/Carrot Juice.jpg">Add to Cart
+                </button>
+            </div>
+        </div>
+
+        <!-- Orange Juice -->
+        <div class="bg-black p-4 shadow-md flex flex-col items-center w-[220px] rounded-lg transition-transform duration-300 hover:scale-105">
+            <img class="w-full h-[150px] object-cover rounded-lg" src="./Resources/Drinks Pics/Orange Juice.png" alt="Orange Juice">
+            <h3 class="text-red-500 text-lg font-bold mt-2">Orange Juice</h3>
+            <p class="text-red-500 text-sm mt-1">Freshly squeezed orange juice with natural sweetness.</p>
+            <span class="text-red-500 text-base font-bold mt-1">239 RS</span>
+            <div class="mt-auto w-full">
+                <button class="bg-red-500 text-black font-bold px-4 py-2 border-2 border-red-500 rounded w-full transition-all duration-300 hover:bg-black hover:text-red-500" 
+                    data-name="Orange Juice" data-price="239" data-image="./Resources/Drinks Pics/Orange Juice.png">Add to Cart
+                </button>
+            </div>
+        </div>
+
+        <!-- Mango Milkshake -->
+        <div class="bg-black p-4 shadow-md flex flex-col items-center w-[220px] rounded-lg transition-transform duration-300 hover:scale-105">
+            <img class="w-full h-[150px] object-cover rounded-lg" src="./Resources/Drinks Pics/Mango Shake.png" alt="Mango Milkshake">
+            <h3 class="text-red-500 text-lg font-bold mt-2">Mango Milkshake</h3>
+            <p class="text-red-500 text-sm mt-1">Delicious mango blended with creamy milk.</p>
+            <span class="text-red-500 text-base font-bold mt-1">279 RS</span>
+            <div class="mt-auto w-full">
+                <button class="bg-red-500 text-black font-bold px-4 py-2 border-2 border-red-500 rounded w-full transition-all duration-300 hover:bg-black hover:text-red-500" 
+                    data-name="Mango Milkshake" data-price="279" data-image="./Resources/Drinks Pics/Mango Shake.png">Add to Cart
+                </button>
+            </div>
+        </div>
+
+        <!-- Strawberry Milkshake -->
+        <div class="bg-black p-4 shadow-md flex flex-col items-center w-[220px] rounded-lg transition-transform duration-300 hover:scale-105">
+            <img class="w-full h-[150px] object-cover rounded-lg" src="./Resources/Drinks Pics/Strawberry Shake.jpg" alt="Strawberry Milkshake">
+            <h3 class="text-red-500 text-lg font-bold mt-2">Strawberry Milkshake</h3>
+            <p class="text-red-500 text-sm mt-1">Fresh strawberries blended into a smooth milkshake.</p>
+            <span class="text-red-500 text-base font-bold mt-1">289 RS</span>
+            <div class="mt-auto w-full">
+                <button class="bg-red-500 text-black font-bold px-4 py-2 border-2 border-red-500 rounded w-full transition-all duration-300 hover:bg-black hover:text-red-500" 
+                    data-name="Strawberry Milkshake" data-price="289" data-image="./Resources/Drinks Pics/Strawberry Shake.jpg">Add to Cart
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Beverages Section -->
+<section class="max-w-4xl mx-auto mt-12 p-8 rounded-xl text-center">
+    <h2 class="bg-black text-red-500 text-4xl font-bold underline rounded-xl p-4">Beverages</h2>
+
+    <div class="flex flex-wrap gap-6 justify-center mt-6">
+        <!-- Water -->
+        <div class="bg-black p-4 shadow-md flex flex-col items-center w-[220px] rounded-lg transition-transform duration-300 hover:scale-105">
+            <img class="w-full h-[150px] object-cover rounded-lg" src="./Resources/Drinks Pics/Water.png" alt="Water">
+            <h3 class="text-red-500 text-lg font-bold mt-2">Water (500ml)</h3>
+            <p class="text-red-500 text-sm mt-1">Pure and refreshing bottled water.</p>
+            <span class="text-red-500 text-base font-bold mt-1">50 RS</span>
+            <div class="mt-auto w-full">
+                <button class="bg-red-500 text-black font-bold px-4 py-2 border-2 border-red-500 rounded w-full transition-all duration-300 hover:bg-black hover:text-red-500" 
+                    data-name="Water (500ml)" data-price="50" data-image="./Resources/Drinks Pics/Water.png">Add to Cart
+                </button>
+            </div>
+        </div>
+
+        <div class="bg-black p-4 shadow-md flex flex-col items-center w-[220px] rounded-lg transition-transform duration-300 hover:scale-105">
+            <img class="w-full h-[150px] object-cover rounded-lg" src="./Resources/Drinks Pics/Water.png" alt="Water">
+            <h3 class="text-red-500 text-lg font-bold mt-2">Water (1L)</h3>
+            <p class="text-red-500 text-sm mt-1">Pure and refreshing bottled water.</p>
+            <span class="text-red-500 text-base font-bold mt-1">80 RS</span>
+            <div class="mt-auto w-full">
+                <button class="bg-red-500 text-black font-bold px-4 py-2 border-2 border-red-500 rounded w-full transition-all duration-300 hover:bg-black hover:text-red-500" 
+                    data-name="Water (1L)" data-price="80" data-image="./Resources/Drinks Pics/Water.png">Add to Cart
+                </button>
+            </div>
+        </div>
+
+        <div class="bg-black p-4 shadow-md flex flex-col items-center w-[220px] rounded-lg transition-transform duration-300 hover:scale-105">
+            <img class="w-full h-[150px] object-cover rounded-lg" src="./Resources/Drinks Pics/Water.png" alt="Water">
+            <h3 class="text-red-500 text-lg font-bold mt-2">Water (1.5L)</h3>
+            <p class="text-red-500 text-sm mt-1">Pure and refreshing bottled water.</p>
+            <span class="text-red-500 text-base font-bold mt-1">120 RS</span>
+            <div class="mt-auto w-full">
+                <button class="bg-red-500 text-black font-bold px-4 py-2 border-2 border-red-500 rounded w-full transition-all duration-300 hover:bg-black hover:text-red-500" 
+                    data-name="Water (1.5L)" data-price="120" data-image="./Resources/Drinks Pics/Water.png">Add to Cart
+                </button>
+            </div>
+        </div>
+
+        <!-- Pepsi -->
+        <div class="bg-black p-4 shadow-md flex flex-col items-center w-[220px] rounded-lg transition-transform duration-300 hover:scale-105">
+            <img class="w-full h-[150px] object-cover rounded-lg" src="./Resources/Drinks Pics/Pepsi.png" alt="Pepsi">
+            <h3 class="text-red-500 text-lg font-bold mt-2">Pepsi (500ml)</h3>
+            <p class="text-red-500 text-sm mt-1">Classic carbonated soft drink.</p>
+            <span class="text-red-500 text-base font-bold mt-1">60 RS</span>
+            <div class="mt-auto w-full">
+                <button class="bg-red-500 text-black font-bold px-4 py-2 border-2 border-red-500 rounded w-full transition-all duration-300 hover:bg-black hover:text-red-500" 
+                    data-name="Pepsi (500ml)" data-price="60" data-image="./Resources/Drinks Pics/Pepsi.png">Add to Cart
+                </button>
+            </div>
+        </div>
+
+        <div class="bg-black p-4 shadow-md flex flex-col items-center w-[220px] rounded-lg transition-transform duration-300 hover:scale-105">
+            <img class="w-full h-[150px] object-cover rounded-lg" src="./Resources/Drinks Pics/Pepsi.png" alt="Pepsi">
+            <h3 class="text-red-500 text-lg font-bold mt-2">Pepsi (1L)</h3>
+            <p class="text-red-500 text-sm mt-1">Classic carbonated soft drink.</p>
+            <span class="text-red-500 text-base font-bold mt-1">100 RS</span>
+            <div class="mt-auto w-full">
+                <button class="bg-red-500 text-black font-bold px-4 py-2 border-2 border-red-500 rounded w-full transition-all duration-300 hover:bg-black hover:text-red-500" 
+                    data-name="Pepsi (1L)" data-price="100" data-image="./Resources/Drinks Pics/Pepsi.png">Add to Cart
+                </button>
+            </div>
+        </div>
+
+        <!-- 7-Up -->
+        <div class="bg-black p-4 shadow-md flex flex-col items-center w-[220px] rounded-lg transition-transform duration-300 hover:scale-105">
+            <img class="w-full h-[150px] object-cover rounded-lg" src="./Resources/Drinks Pics/7-Up.png" alt="7-Up">
+            <h3 class="text-red-500 text-lg font-bold mt-2">7-Up (500ml)</h3>
+            <p class="text-red-500 text-sm mt-1">Lemon-lime flavored soda.</p>
+            <span class="text-red-500 text-base font-bold mt-1">60 RS</span>
+            <div class="mt-auto w-full">
+                <button class="bg-red-500 text-black font-bold px-4 py-2 border-2 border-red-500 rounded w-full transition-all duration-300 hover:bg-black hover:text-red-500" 
+                    data-name="7-Up (500ml)" data-price="60" data-image="./Resources/Drinks Pics/7-Up.png">Add to Cart
+                </button>
+            </div>
+        </div>
+
+        <!-- Mirinda -->
+        <div class="bg-black p-4 shadow-md flex flex-col items-center w-[220px] rounded-lg transition-transform duration-300 hover:scale-105">
+            <img class="w-full h-[150px] object-cover rounded-lg" src="./Resources/Drinks Pics/Marinda.png" alt="Mirinda">
+            <h3 class="text-red-500 text-lg font-bold mt-2">Mirinda (500ml)</h3>
+            <p class="text-red-500 text-sm mt-1">Refreshing orange-flavored soda.</p>
+            <span class="text-red-500 text-base font-bold mt-1">60 RS</span>
+            <div class="mt-auto w-full">
+                <button class="bg-red-500 text-black font-bold px-4 py-2 border-2 border-red-500 rounded w-full transition-all duration-300 hover:bg-black hover:text-red-500" 
+                    data-name="Mirinda (500ml)" data-price="60" data-image="./Resources/Drinks Pics/Marinda.png">Add to Cart
+                </button>
+            </div>
+        </div>
+
+        <!-- Mountain Dew -->
+        <div class="bg-black p-4 shadow-md flex flex-col items-center w-[220px] rounded-lg transition-transform duration-300 hover:scale-105">
+            <img class="w-full h-[150px] object-cover rounded-lg" src="./Resources/Drinks Pics/M-Dew.png" alt="Mountain Dew">
+            <h3 class="text-red-500 text-lg font-bold mt-2">Mountain Dew (500ml)</h3>
+            <p class="text-red-500 text-sm mt-1">Citrus-flavored carbonated drink.</p>
+            <span class="text-red-500 text-base font-bold mt-1">60 RS</span>
+            <div class="mt-auto w-full">
+                <button class="bg-red-500 text-black font-bold px-4 py-2 border-2 border-red-500 rounded w-full transition-all duration-300 hover:bg-black hover:text-red-500" 
+                    data-name="Mountain Dew (500ml)" data-price="60" data-image="./Resources/Drinks Pics/M-Dew.png">Add to Cart
+                </button>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+    <!-- Footer with Social Media -->
+<footer id="contact" class="bg-black text-red-500 text-center py-5 mt-12">
+    <h2 class="text-3xl font-bold">Contact Us</h2>
+    <p class="mt-2">Phone: 123-456-7890 | Email: restaurant@support.com</p>
+
+    <div class="social-media mt-5">
+        <a href="#" class="social-icon inline-flex items-center justify-center w-12 h-12 mx-2 rounded-full bg-red-500 text-black text-xl transition-all duration-300 transform hover:bg-darkred hover:rotate-360">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="#" class="social-icon inline-flex items-center justify-center w-12 h-12 mx-2 rounded-full bg-red-500 text-black text-xl transition-all duration-300 transform hover:bg-darkred hover:rotate-360">
+            <i class="fab fa-twitter"></i>
+        </a>
+        <a href="#" class="social-icon inline-flex items-center justify-center w-12 h-12 mx-2 rounded-full bg-red-500 text-black text-xl transition-all duration-300 transform hover:bg-darkred hover:rotate-360">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="#" class="social-icon inline-flex items-center justify-center w-12 h-12 mx-2 rounded-full bg-red-500 text-black text-xl transition-all duration-300 transform hover:bg-darkred hover:rotate-360">
+            <i class="fab fa-linkedin-in"></i>
+        </a>
+    </div>
+</footer>
+
+
+<style>
+    @keyframes rotate360 {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    .hover\:rotate-360:hover {
+        animation: rotate360 0.5s ease-in-out;
+    }
+
+    .hover\:bg-darkred:hover {
+        background-color: #8B0000; 
+    }
+</style>
+
+<script src="./Javascript/Cart.js"></script>
+<script src="./Javascript/script.js"></script>
+
+</body>
+</html>

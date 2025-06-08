@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Homepage</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+
+</head>
+
+<body class="bg-red-700 font-sans m-0 p-0">
+
+<!-- Navigation Bar -->
+<nav id="navbar" class="bg-black sticky top-0 w-full shadow-lg py-3 transition-transform duration-300 z-50">
+    <div class="max-w-6xl mx-auto px-5">
+      <div class="flex justify-between items-center">
+        <!-- Logo -->
+        <div class="flex items-center space-x-3">
+          <img src="./Resources/Homepage/logo.png" alt="Brand Logo" class="w-12 h-auto rounded-xl shadow-md">
+          <h1 class="text-red-500 text-lg font-bold underline">Brand Name</h1>
+        </div>
+  
+        <!-- Hamburger Button (Mobile) -->
+        <button id="nav-toggle" class="lg:hidden text-red-500 text-2xl focus:outline-none">
+          <i class="fas fa-bars"></i>
+        </button>
+  
+        <!-- Navigation Links (Desktop) -->
+        <div id="nav-menu" class="hidden lg:flex flex-col lg:flex-row lg:items-center lg:space-x-4 text-center">
+         
+            <a href="homepage.html" class="bg-red-500 text-black font-bold px-4 py-2 rounded-md border-2 border-red-500 hover:bg-black hover:text-red-500 transition">Home</a>
+
+            <a href="about.html" class="bg-red-500 text-black font-bold px-4 py-2 rounded-md border-2 border-red-500 hover:bg-black hover:text-red-500 transition">About Us</a>
+         
+            <a href="homepage.html#specials" class="bg-red-500 text-black font-bold px-4 py-2 rounded-md border-2 border-red-500 hover:bg-black hover:text-red-500 transition">Today's Special</a>
+          
+          
+            <a href="homepage.html#menu" class="bg-red-500 text-black font-bold px-4 py-2 rounded-md border-2 border-red-500 hover:bg-black hover:text-red-500 transition">Menu</a>
+          <a href="homepage.html#contact" class="bg-red-500 text-black font-bold px-4 py-2 rounded-md border-2 border-red-500 hover:bg-black hover:text-red-500 transition">Contact</a>
+          <a href="login.html" class="bg-red-500 text-black font-bold px-4 py-2 rounded-md border-2 border-red-500 hover:bg-black hover:text-red-500 transition flex items-center justify-center space-x-2">
+            <i class="fas fa-user"></i><span>Login/Register</span>
+          </a>
+          <a href="Cart.html" class="bg-red-500 text-black font-bold px-4 py-2 rounded-md border-2 border-red-500 hover:bg-black hover:text-red-500 transition flex items-center justify-center space-x-2">
+            <i class="fas fa-shopping-cart"></i><span>Cart</span>
+          </a>
+        </div>
+      </div>
+  
+      <!-- Navigation Links (Mobile Dropdown) -->
+      <div id="nav-menu-mobile" class="lg:hidden hidden flex-col items-center mt-4 space-y-3 text-center">
+        <a href="homepage.html" class="bg-red-500 text-black font-bold px-4 py-2 w-full rounded-md border-2 border-red-500 hover:bg-black hover:text-red-500 transition">Home</a>
+        <a href="about.html" class="bg-red-500 text-black font-bold px-4 py-2 w-full rounded-md border-2 border-red-500 hover:bg-black hover:text-red-500 transition">About Us</a>
+        <a href="homepage.html#specials" class="bg-red-500 text-black font-bold px-4 py-2 w-full rounded-md border-2 border-red-500 hover:bg-black hover:text-red-500 transition">Today's Special</a>
+        <a href="homepage.html#menu" class="bg-red-500 text-black font-bold px-4 py-2 w-full rounded-md border-2 border-red-500 hover:bg-black hover:text-red-500 transition">Menu</a>
+        <a href="homepage.html#contact" class="bg-red-500 text-black font-bold px-4 py-2 w-full rounded-md border-2 border-red-500 hover:bg-black hover:text-red-500 transition">Contact</a>
+        <a href="login.html" class="bg-red-500 text-black font-bold px-4 py-2 w-full rounded-md border-2 border-red-500 hover:bg-black hover:text-red-500 transition flex items-center justify-center space-x-2">
+          <i class="fas fa-user"></i><span>Login/Register</span>
+        </a>
+        <a href="Cart.html" class="bg-red-500 text-black font-bold px-4 py-2 w-full rounded-md border-2 border-red-500 hover:bg-black hover:text-red-500 transition flex items-center justify-center space-x-2">
+          <i class="fas fa-shopping-cart"></i><span>Cart</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+    <!-- JS -->
+    <script>
+        const toggle = document.getElementById('nav-toggle');
+        const mobileMenu = document.getElementById('nav-menu-mobile');
+      
+        toggle.addEventListener('click', () => {
+          mobileMenu.classList.toggle('hidden');
+        });
+      </script>
+
+    <!-- Page Heading -->
+<header class="bg-black text-red-500 text-center p-8 mt-16 rounded-xl text-2xl font-bold">
+    <h1>Our Appetizers Selection</h1>
+    <p class="text-lg mt-2">Start your meal with our irresistible appetizers, from crispy bites to cheesy delights, perfect for any occasion.</p>
+</header>
+
+<!-- Appetizers Section -->
+<section class="max-w-4xl mx-auto mt-12 p-8 rounded-xl text-center">
+    <h2 class="bg-black text-red-500 text-4xl font-bold underline rounded-xl p-4">Appetizers</h2>
+
+    <div class="flex flex-wrap gap-6 justify-center mt-6">
+        <!-- Chicken Wings -->
+        <div class="bg-black p-4 shadow-md flex flex-col items-center w-[220px] rounded-lg transition-transform duration-300 hover:scale-105">
+            <img class="w-full h-[150px] object-cover rounded-lg" src="./Resources/Apppitizers Pics/Wings.png" alt="Chicken Wings">
+            <h3 class="text-red-500 text-lg font-bold mt-2">Chicken Wings (x6)</h3>
+            <p class="text-red-500 text-sm mt-1">Crispy, juicy, and seasoned to perfection.</p>
+            <span class="text-red-500 text-base font-bold mt-1">299 RS</span>
+            <div class="mt-auto w-full">
+                <button class="bg-red-500 text-black font-bold px-4 py-2 border-2 border-red-500 rounded w-full transition-all duration-300 hover:bg-black hover:text-red-500" 
+                    data-name="Chicken Wings" data-price="299" data-image="./Resources/Apppitizers Pics/Wings.png">Add to Cart
+                </button>
+            </div>
+        </div>
+
+        <!-- Chicken Nuggets -->
+        <div class="bg-black p-4 shadow-md flex flex-col items-center w-[220px] rounded-lg transition-transform duration-300 hover:scale-105">
+            <img class="w-full h-[150px] object-cover rounded-lg" src="./Resources/Apppitizers Pics/Nuggets.png" alt="Chicken Nuggets">
+            <h3 class="text-red-500 text-lg font-bold mt-2">Chicken Nuggets (x6)</h3>
+            <p class="text-red-500 text-sm mt-1">Golden, crunchy, and tender inside.</p>
+            <span class="text-red-500 text-base font-bold mt-1">249 RS</span>
+            <div class="mt-auto w-full">
+                <button class="bg-red-500 text-black font-bold px-4 py-2 border-2 border-red-500 rounded w-full transition-all duration-300 hover:bg-black hover:text-red-500" 
+                    data-name="Chicken Nuggets" data-price="249" data-image="./Resources/Apppitizers Pics/Nuggets.png">Add to Cart
+                </button>
+            </div>
+        </div>
+
+        <!-- Chicken Popcorn -->
+        <div class="bg-black p-4 shadow-md flex flex-col items-center w-[220px] rounded-lg transition-transform duration-300 hover:scale-105">
+            <img class="w-full h-[150px] object-cover rounded-lg" src="./Resources/Apppitizers Pics/Popcorn.png" alt="Chicken Popcorn">
+            <h3 class="text-red-500 text-lg font-bold mt-2">Chicken Popcorns (x6)</h3>
+            <p class="text-red-500 text-sm mt-1">Bite-sized crispy and flavorful popcorn chicken.</p>
+            <span class="text-red-500 text-base font-bold mt-1">259 RS</span>
+            <div class="mt-auto w-full">
+                <button class="bg-red-500 text-black font-bold px-4 py-2 border-2 border-red-500 rounded w-full transition-all duration-300 hover:bg-black hover:text-red-500" 
+                    data-name="Chicken Popcorns" data-price="259" data-image="./Resources/Apppitizers Pics/Popcorn.png">Add to Cart
+                </button>
+            </div>
+        </div>
+
+        <!-- Chicken Fingers -->
+        <div class="bg-black p-4 shadow-md flex flex-col items-center w-[220px] rounded-lg transition-transform duration-300 hover:scale-105">
+            <img class="w-full h-[150px] object-cover rounded-lg" src="./Resources/Apppitizers Pics/Fingers.png" alt="Chicken Fingers">
+            <h3 class="text-red-500 text-lg font-bold mt-2">Chicken Fingers (x6)</h3>
+            <p class="text-red-500 text-sm mt-1">Crispy breaded chicken strips.</p>
+            <span class="text-red-500 text-base font-bold mt-1">279 RS</span>
+            <div class="mt-auto w-full">
+                <button class="bg-red-500 text-black font-bold px-4 py-2 border-2 border-red-500 rounded w-full transition-all duration-300 hover:bg-black hover:text-red-500" 
+                    data-name="Chicken Fingers" data-price="279" data-image="./Resources/Apppitizers Pics/Fingers.png">Add to Cart
+                </button>
+            </div>
+        </div>
+
+        <!-- Mozzarella Sticks -->
+        <div class="bg-black p-4 shadow-md flex flex-col items-center w-[220px] rounded-lg transition-transform duration-300 hover:scale-105">
+            <img class="w-full h-[150px] object-cover rounded-lg" src="./Resources/Apppitizers Pics/MSticks.png" alt="Mozzarella Sticks">
+            <h3 class="text-red-500 text-lg font-bold mt-2">Mozzarella Sticks (x6)</h3>
+            <p class="text-red-500 text-sm mt-1">Cheesy and crispy delight, served with marinara sauce.</p>
+            <span class="text-red-500 text-base font-bold mt-1">299 RS</span>
+            <div class="mt-auto w-full">
+                <button class="bg-red-500 text-black font-bold px-4 py-2 border-2 border-red-500 rounded w-full transition-all duration-300 hover:bg-black hover:text-red-500" 
+                    data-name="Mozzarella Sticks" data-price="299" data-image="./Resources/Apppitizers Pics/MSticks.png">Add to Cart
+                </button>
+            </div>
+        </div>
+
+        <!-- Cheese Balls -->
+        <div class="bg-black p-4 shadow-md flex flex-col items-center w-[220px] rounded-lg transition-transform duration-300 hover:scale-105">
+            <img class="w-full h-[150px] object-cover rounded-lg" src="./Resources/Apppitizers Pics/Cheese Balls.png" alt="Cheese Balls">
+            <h3 class="text-red-500 text-lg font-bold mt-2">Cheese Balls (x6)</h3>
+            <p class="text-red-500 text-sm mt-1">Crunchy on the outside, cheesy on the inside.</p>
+            <span class="text-red-500 text-base font-bold mt-1">289 RS</span>
+            <div class="mt-auto w-full">
+                <button class="bg-red-500 text-black font-bold px-4 py-2 border-2 border-red-500 rounded w-full transition-all duration-300 hover:bg-black hover:text-red-500" 
+                    data-name="Cheese Balls" data-price="289" data-image="./Resources/Apppitizers Pics/Cheese Balls.png">Add to Cart
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Footer with Social Media -->
+<footer id="contact" class="bg-black text-red-500 text-center py-5 mt-12">
+    <h2 class="text-3xl font-bold">Contact Us</h2>
+    <p class="mt-2">Phone: 123-456-7890 | Email: restaurant@support.com</p>
+
+    <div class="social-media mt-5">
+        <a href="#" class="social-icon inline-flex items-center justify-center w-12 h-12 mx-2 rounded-full bg-red-500 text-black text-xl transition-all duration-300 transform hover:bg-darkred hover:rotate-360">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="#" class="social-icon inline-flex items-center justify-center w-12 h-12 mx-2 rounded-full bg-red-500 text-black text-xl transition-all duration-300 transform hover:bg-darkred hover:rotate-360">
+            <i class="fab fa-twitter"></i>
+        </a>
+        <a href="#" class="social-icon inline-flex items-center justify-center w-12 h-12 mx-2 rounded-full bg-red-500 text-black text-xl transition-all duration-300 transform hover:bg-darkred hover:rotate-360">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="#" class="social-icon inline-flex items-center justify-center w-12 h-12 mx-2 rounded-full bg-red-500 text-black text-xl transition-all duration-300 transform hover:bg-darkred hover:rotate-360">
+            <i class="fab fa-linkedin-in"></i>
+        </a>
+    </div>
+</footer>
+
+
+<style>
+    @keyframes rotate360 {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    .hover\:rotate-360:hover {
+        animation: rotate360 0.5s ease-in-out;
+    }
+
+    .hover\:bg-darkred:hover {
+        background-color: #8B0000; 
+    }
+</style>
+
+<script src="./Javascript/Cart.js"></script>
+<script src="./Javascript/script.js"></script>
+    
+
+</body>
+</html>

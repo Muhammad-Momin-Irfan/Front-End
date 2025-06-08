@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Homepage</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+
+</head>
+
+<body class="bg-red-700 font-sans m-0 p-0">
+
+<!-- Navigation Bar -->
+<nav id="navbar" class="bg-black sticky top-0 w-full shadow-lg py-3 transition-transform duration-300 z-50">
+    <div class="max-w-6xl mx-auto px-5">
+      <div class="flex justify-between items-center">
+        <!-- Logo -->
+        <div class="flex items-center space-x-3">
+          <img src="./Resources/Homepage/logo.png" alt="Brand Logo" class="w-12 h-auto rounded-xl shadow-md">
+          <h1 class="text-red-500 text-lg font-bold underline">Brand Name</h1>
+        </div>
+  
+        <!-- Hamburger Button (Mobile) -->
+        <button id="nav-toggle" class="lg:hidden text-red-500 text-2xl focus:outline-none">
+          <i class="fas fa-bars"></i>
+        </button>
+  
+        <!-- Navigation Links (Desktop) -->
+        <div id="nav-menu" class="hidden lg:flex flex-col lg:flex-row lg:items-center lg:space-x-4 text-center">
+         
+            <a href="homepage.html" class="bg-red-500 text-black font-bold px-4 py-2 rounded-md border-2 border-red-500 hover:bg-black hover:text-red-500 transition">Home</a>
+
+            <a href="about.html" class="bg-red-500 text-black font-bold px-4 py-2 rounded-md border-2 border-red-500 hover:bg-black hover:text-red-500 transition">About Us</a>
+         
+            <a href="homepage.html#specials" class="bg-red-500 text-black font-bold px-4 py-2 rounded-md border-2 border-red-500 hover:bg-black hover:text-red-500 transition">Today's Special</a>
+          
+          
+            <a href="homepage.html#menu" class="bg-red-500 text-black font-bold px-4 py-2 rounded-md border-2 border-red-500 hover:bg-black hover:text-red-500 transition">Menu</a>
+          <a href="homepage.html#contact" class="bg-red-500 text-black font-bold px-4 py-2 rounded-md border-2 border-red-500 hover:bg-black hover:text-red-500 transition">Contact</a>
+          <a href="login.html" class="bg-red-500 text-black font-bold px-4 py-2 rounded-md border-2 border-red-500 hover:bg-black hover:text-red-500 transition flex items-center justify-center space-x-2">
+            <i class="fas fa-user"></i><span>Login/Register</span>
+          </a>
+          <a href="Cart.html" class="bg-red-500 text-black font-bold px-4 py-2 rounded-md border-2 border-red-500 hover:bg-black hover:text-red-500 transition flex items-center justify-center space-x-2">
+            <i class="fas fa-shopping-cart"></i><span>Cart</span>
+          </a>
+        </div>
+      </div>
+  
+      <!-- Navigation Links (Mobile Dropdown) -->
+      <div id="nav-menu-mobile" class="lg:hidden hidden flex-col items-center mt-4 space-y-3 text-center">
+        <a href="homepage.html" class="bg-red-500 text-black font-bold px-4 py-2 w-full rounded-md border-2 border-red-500 hover:bg-black hover:text-red-500 transition">Home</a>
+        <a href="about.html" class="bg-red-500 text-black font-bold px-4 py-2 w-full rounded-md border-2 border-red-500 hover:bg-black hover:text-red-500 transition">About Us</a>
+        <a href="homepage.html#specials" class="bg-red-500 text-black font-bold px-4 py-2 w-full rounded-md border-2 border-red-500 hover:bg-black hover:text-red-500 transition">Today's Special</a>
+        <a href="homepage.html#menu" class="bg-red-500 text-black font-bold px-4 py-2 w-full rounded-md border-2 border-red-500 hover:bg-black hover:text-red-500 transition">Menu</a>
+        <a href="homepage.html#contact" class="bg-red-500 text-black font-bold px-4 py-2 w-full rounded-md border-2 border-red-500 hover:bg-black hover:text-red-500 transition">Contact</a>
+        <a href="login.html" class="bg-red-500 text-black font-bold px-4 py-2 w-full rounded-md border-2 border-red-500 hover:bg-black hover:text-red-500 transition flex items-center justify-center space-x-2">
+          <i class="fas fa-user"></i><span>Login/Register</span>
+        </a>
+        <a href="Cart.html" class="bg-red-500 text-black font-bold px-4 py-2 w-full rounded-md border-2 border-red-500 hover:bg-black hover:text-red-500 transition flex items-center justify-center space-x-2">
+          <i class="fas fa-shopping-cart"></i><span>Cart</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+    <!-- JS -->
+    <script>
+        const toggle = document.getElementById('nav-toggle');
+        const mobileMenu = document.getElementById('nav-menu-mobile');
+      
+        toggle.addEventListener('click', () => {
+          mobileMenu.classList.toggle('hidden');
+        });
+      </script>
+
+    <!-- Page Heading -->
+    <header class="bg-black text-red-500 text-center p-8 mt-16 rounded-xl text-2xl font-bold">
+        <h1>Our Burger Selection</h1>
+        <p class="text-lg mt-2">Savor our range of juicy and flavorful burgers, crafted with the finest ingredients and served with fresh toppings.</p>
+    </header>
+
+    <!-- Regular Burgers Section -->
+<section class="max-w-4xl mx-auto mt-12 p-8 rounded-xl text-center">
+    <h2 class="bg-black text-red-500 text-4xl font-bold underline rounded-xl p-4">Regular Burgers</h2>
+
+    <div class="flex flex-wrap gap-6 justify-center mt-6">
+        <!-- Regular Burger -->
+        <div class="bg-black p-4 shadow-md flex flex-col items-center w-[220px] rounded-lg transition-transform duration-300 hover:scale-105">
+            <img class="w-full h-[150px] object-cover rounded-lg" src="./Resources/Burger Pics/Regular.png" alt="Regular Burger">
+            <h3 class="text-red-500 text-lg font-bold mt-2">Regular Burger</h3>
+            <p class="text-red-500 text-sm mt-1">A classic burger with fresh lettuce, tomato, and our special sauce.</p>
+            <span class="text-red-500 text-base font-bold mt-1">399 RS</span>
+            <div class="mt-auto w-full">
+                <button class="bg-red-500 text-black font-bold px-4 py-2 border-2 border-red-500 rounded w-full transition-all duration-300 hover:bg-black hover:text-red-500" 
+                    data-name="Regular Burger" data-price="399" data-image="./Resources/Burger Pics/Regular.png">Add to Cart
+                </button>
+            </div>
+        </div>
+
+        <!-- Regular Burger with Cheese -->
+        <div class="bg-black p-4 shadow-md flex flex-col items-center w-[220px] rounded-lg transition-transform duration-300 hover:scale-105">
+            <img class="w-full h-[150px] object-cover rounded-lg" src="./Resources/Burger Pics/Regular C.png" alt="Regular Burger with Cheese">
+            <h3 class="text-red-500 text-lg font-bold mt-2">Regular Burger with Cheese</h3>
+            <p class="text-red-500 text-sm mt-1">A classic burger with melted cheese, lettuce, tomato, and special sauce.</p>
+            <span class="text-red-500 text-base font-bold mt-1">449 RS</span>
+            <div class="mt-auto w-full">
+                <button class="bg-red-500 text-black font-bold px-4 py-2 border-2 border-red-500 rounded w-full transition-all duration-300 hover:bg-black hover:text-red-500" 
+                    data-name="Regular Burger with Cheese" data-price="449" data-image="./Resources/Burger Pics/Regular C.png">Add to Cart
+                </button>
+            </div>
+        </div>
+
+        <!-- Double Egg Regular Burger -->
+        <div class="bg-black p-4 shadow-md flex flex-col items-center w-[220px] rounded-lg transition-transform duration-300 hover:scale-105">
+            <img class="w-full h-[150px] object-cover rounded-lg" src="./Resources/Burger Pics/Regular.png" alt="Double Egg Regular Burger">
+            <h3 class="text-red-500 text-lg font-bold mt-2">Double Egg Regular Burger</h3>
+            <p class="text-red-500 text-sm mt-1">A delicious regular burger topped with two eggs for extra flavor.</p>
+            <span class="text-red-500 text-base font-bold mt-1">499 RS</span>
+            <div class="mt-auto w-full">
+                <button class="bg-red-500 text-black font-bold px-4 py-2 border-2 border-red-500 rounded w-full transition-all duration-300 hover:bg-black hover:text-red-500" 
+                    data-name="Double Egg Regular Burger" data-price="499" data-image="./Resources/Burger Pics/Regular.png">Add to Cart
+                </button>
+            </div>
+        </div>
+
+        <!-- Mighty Regular -->
+        <div class="bg-black p-4 shadow-md flex flex-col items-center w-[220px] rounded-lg transition-transform duration-300 hover:scale-105">
+            <img class="w-full h-[150px] object-cover rounded-lg" src="./Resources/Burger Pics/Regular M.jpg" alt="Mighty Regular">
+            <h3 class="text-red-500 text-lg font-bold mt-2">Mighty Regular</h3>
+            <p class="text-red-500 text-sm mt-1">A jumbo-sized regular burger packed with extra meat and flavor.</p>
+            <span class="text-red-500 text-base font-bold mt-1">599 RS</span>
+            <div class="mt-auto w-full">
+                <button class="bg-red-500 text-black font-bold px-4 py-2 border-2 border-red-500 rounded w-full transition-all duration-300 hover:bg-black hover:text-red-500" 
+                    data-name="Mighty Regular" data-price="599" data-image="./Resources/Burger Pics/Regular M.jpg">Add to Cart
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Chicken Burgers Section -->
+<section class="max-w-4xl mx-auto mt-12 p-8 rounded-xl text-center">
+    <h2 class="bg-black text-red-500 text-4xl font-bold underline rounded-xl p-4">Chicken Burgers</h2>
+
+    <div class="flex flex-wrap gap-6 justify-center mt-6">
+        <!-- Chicken Patty Burger -->
+        <div class="bg-black p-4 shadow-md flex flex-col items-center w-[220px] rounded-lg transition-transform duration-300 hover:scale-105">
+            <img class="w-full h-[150px] object-cover rounded-lg" src="./Resources/Burger Pics/Patty.png" alt="Chicken Patty Burger">
+            <h3 class="text-red-500 text-lg font-bold mt-2">Chicken Patty Burger</h3>
+            <p class="text-red-500 text-sm mt-1">Crispy chicken patty with fresh lettuce, tomato, and mayo.</p>
+            <span class="text-red-500 text-base font-bold mt-1">399 RS</span>
+            <div class="mt-auto w-full">
+                <button class="bg-red-500 text-black font-bold px-4 py-2 border-2 border-red-500 rounded w-full transition-all duration-300 hover:bg-black hover:text-red-500" 
+                    data-name="Chicken Patty Burger" data-price="399" data-image="./Resources/Burger Pics/Patty.png">Add to Cart
+                </button>
+            </div>
+        </div>
+
+        <!-- Double Patty -->
+        <div class="bg-black p-4 shadow-md flex flex-col items-center w-[220px] rounded-lg transition-transform duration-300 hover:scale-105">
+            <img class="w-full h-[150px] object-cover rounded-lg" src="./Resources/Burger Pics/Double P.png" alt="Double Patty">
+            <h3 class="text-red-500 text-lg font-bold mt-2">Double Patty</h3>
+            <p class="text-red-500 text-sm mt-1">Two crispy chicken patties stacked with lettuce, tomato, and mayo.</p>
+            <span class="text-red-500 text-base font-bold mt-1">549 RS</span>
+            <div class="mt-auto w-full">
+                <button class="bg-red-500 text-black font-bold px-4 py-2 border-2 border-red-500 rounded w-full transition-all duration-300 hover:bg-black hover:text-red-500" 
+                    data-name="Double Patty" data-price="549" data-image="./Resources/Burger Pics/Double P.png">Add to Cart
+                </button>
+            </div>
+        </div>
+
+        <!-- Patty with Cheese -->
+        <div class="bg-black p-4 shadow-md flex flex-col items-center w-[220px] rounded-lg transition-transform duration-300 hover:scale-105">
+            <img class="w-full h-[150px] object-cover rounded-lg" src="./Resources/Burger Pics/Pattywith Cheese.png" alt="Patty with Cheese">
+            <h3 class="text-red-500 text-lg font-bold mt-2">Patty with Cheese</h3>
+            <p class="text-red-500 text-sm mt-1">Crispy chicken patty with melted cheese, lettuce, and mayo.</p>
+            <span class="text-red-500 text-base font-bold mt-1">449 RS</span>
+            <div class="mt-auto w-full">
+                <button class="bg-red-500 text-black font-bold px-4 py-2 border-2 border-red-500 rounded w-full transition-all duration-300 hover:bg-black hover:text-red-500" 
+                    data-name="Patty with Cheese" data-price="449" data-image="./Resources/Burger Pics/Pattywith Cheese.png">Add to Cart
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Beef Burgers Section -->
+<section class="max-w-4xl mx-auto mt-12 p-8 rounded-xl text-center">
+    <h2 class="bg-black text-red-500 text-4xl font-bold underline rounded-xl p-4">Beef Burgers</h2>
+
+    <div class="flex flex-wrap gap-6 justify-center mt-6">
+        <!-- Hamburger -->
+        <div class="bg-black p-4 shadow-md flex flex-col items-center w-[220px] rounded-lg transition-transform duration-300 hover:scale-105">
+            <img class="w-full h-[150px] object-cover rounded-lg" src="./Resources/Burger Pics/Hamburger.png" alt="Hamburger">
+            <h3 class="text-red-500 text-lg font-bold mt-2">Hamburger</h3>
+            <p class="text-red-500 text-sm mt-1">Classic beef patty with fresh lettuce, tomato, and mustard.</p>
+            <span class="text-red-500 text-base font-bold mt-1">499 RS</span>
+            <div class="mt-auto w-full">
+                <button class="bg-red-500 text-black font-bold px-4 py-2 border-2 border-red-500 rounded w-full transition-all duration-300 hover:bg-black hover:text-red-500" 
+                    data-name="Hamburger" data-price="499" data-image="./Resources/Burger Pics/Hamburger.png">Add to Cart
+                </button>
+            </div>
+        </div>
+
+        <!-- Smash Burger -->
+        <div class="bg-black p-4 shadow-md flex flex-col items-center w-[220px] rounded-lg transition-transform duration-300 hover:scale-105">
+            <img class="w-full h-[150px] object-cover rounded-lg" src="./Resources/Burger Pics/Smash.png" alt="Smash Burger">
+            <h3 class="text-red-500 text-lg font-bold mt-2">Smash Burger</h3>
+            <p class="text-red-500 text-sm mt-1">Smoked beef patty smashed with caramelized onions and cheese.</p>
+            <span class="text-red-500 text-base font-bold mt-1">549 RS</span>
+            <div class="mt-auto w-full">
+                <button class="bg-red-500 text-black font-bold px-4 py-2 border-2 border-red-500 rounded w-full transition-all duration-300 hover:bg-black hover:text-red-500" 
+                    data-name="Smash Burger" data-price="549" data-image="./Resources/Burger Pics/Smash.png">Add to Cart
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Footer with Social Media -->
+<footer id="contact" class="bg-black text-red-500 text-center py-5 mt-12">
+    <h2 class="text-3xl font-bold">Contact Us</h2>
+    <p class="mt-2">Phone: 123-456-7890 | Email: restaurant@support.com</p>
+
+    <div class="social-media mt-5">
+        <a href="#" class="social-icon inline-flex items-center justify-center w-12 h-12 mx-2 rounded-full bg-red-500 text-black text-xl transition-all duration-300 transform hover:bg-darkred hover:rotate-360">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="#" class="social-icon inline-flex items-center justify-center w-12 h-12 mx-2 rounded-full bg-red-500 text-black text-xl transition-all duration-300 transform hover:bg-darkred hover:rotate-360">
+            <i class="fab fa-twitter"></i>
+        </a>
+        <a href="#" class="social-icon inline-flex items-center justify-center w-12 h-12 mx-2 rounded-full bg-red-500 text-black text-xl transition-all duration-300 transform hover:bg-darkred hover:rotate-360">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="#" class="social-icon inline-flex items-center justify-center w-12 h-12 mx-2 rounded-full bg-red-500 text-black text-xl transition-all duration-300 transform hover:bg-darkred hover:rotate-360">
+            <i class="fab fa-linkedin-in"></i>
+        </a>
+    </div>
+</footer>
+
+
+<style>
+    @keyframes rotate360 {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    .hover\:rotate-360:hover {
+        animation: rotate360 0.5s ease-in-out;
+    }
+
+    .hover\:bg-darkred:hover {
+        background-color: #8B0000; 
+    }
+</style>
+
+<script src="./Javascript/Cart.js"></script>
+<script src="./Javascript/script.js"></script>
+
+</body>
+</html>
